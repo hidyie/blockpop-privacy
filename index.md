@@ -1,8 +1,8 @@
-# Block Pop! 개인정보처리방침 (한국어)
+# Block PopPop 개인정보처리방침 (한국어)
 
-**시행일: 2026-07-14 · 최종 개정일: 2026-09-15**
+**시행일: 2026-07-14 · 최종 개정일: 2026-09-29**
 
-GameFactory Studio(이하 "개발자")는 Block Pop!(이하 "앱", Android 설치 앱 및 토스 미니앱 `block-pop`) 이용자의
+GameFactory Studio(이하 "개발자")는 Block PopPop(이하 "앱", Google Play Android 앱 `com.casualgamefactory.blockpoppop` 및 토스 미니앱 `block-pop`) 이용자의
 개인정보를 중요시하며, 「개인정보 보호법」 등 관련 법령을 준수합니다.
 
 ## 1. 수집하는 정보
@@ -32,7 +32,7 @@ GameFactory Studio(이하 "개발자")는 Block Pop!(이하 "앱", Android 설�
 
 ### 1.4 토스 첫 안내 A/B 분석 (기능 활성화 시)
 
-실험 `first_hint_v1`, 버전 `1`은 첫 안내 문구 A/B만 비교합니다. 배정은 로컬 무작위 값으로 저장하며, 점수·손패·난도·5콤보 테마 보상·광고 빈도는 바꾸지 않습니다. 최초 안내를 아직 완료하지 않은 설치가 등록 대상입니다.
+실험 `first_hint_v1`, 버전 `1`은 첫 안내 문구 A/B만 비교합니다. 배정은 로컬 무작위 값으로 저장하며, 점수·손패·난도·콤보 테마 보상·광고 빈도는 바꾸지 않습니다. 최초 안내를 아직 완료하지 않은 설치가 등록 대상입니다.
 
 | 커스텀 전송 필드 | 허용 값 |
 |---|---|
@@ -47,6 +47,10 @@ GameFactory Studio(이하 "개발자")는 Block Pop!(이하 "앱", Android 설�
 이 분석은 토스에서 제공되는 정식 서비스에서 실험과 분석 기능이 활성화된 경우에만 토스 분석 서비스로 전송합니다. 분석 기능이 꺼져 있어도 광고 플랫폼의 정보 처리는 별도로 이루어질 수 있습니다.
 
 각 이벤트는 중복 전송을 방지하도록 기록하며, 전송이 실패한 이벤트는 다시 전송하지 않습니다. 저장 데이터를 삭제하거나 앱을 다시 설치하면 새로운 안내 문구가 배정될 수 있습니다. 개발자의 커스텀 분석 항목으로 개인이나 여러 기기의 이용 이력을 연결하지 않습니다.
+
+### 1.5 로컬 알림 (Android 13 이상은 알림 권한 필요)
+
+Android 앱은 기기 안에서 예약하는 알림(연속 플레이가 끊길 위험, 오늘의 데일리 챌린지, 새 테마 칩, 복귀 안내 중 하나)을 보낼 수 있습니다. 알림 문구와 발송 시각은 §1.2의 기기 내 저장 정보만으로 기기에서 계산하며, 서버로 전송하는 정보는 없습니다. Android 13 이상에서는 알림 권한을 요청하며, 앱 실행 시가 아니라 첫 게임을 마친 직후 한 번만 요청합니다. 권한을 거부해도 알림이 표시되지 않을 뿐 다른 기능에는 영향이 없습니다.
 
 ## 2. 제3자 서비스
 
@@ -97,12 +101,12 @@ Google의 광고 데이터 사용 방식: https://policies.google.com/technologi
 
 ---
 
-# Block Pop! Privacy Policy (English)
+# Block PopPop Privacy Policy (English)
 
-**Effective date: 2026-07-14 · Last revised: 2026-09-15**
+**Effective date: 2026-07-14 · Last revised: 2026-09-29**
 
-GameFactory Studio ("we", "the developer") operates the Block Pop! mobile application
-("the App", including the Android app and Toss mini-app `block-pop`). This page informs you of our policies
+GameFactory Studio ("we", "the developer") operates the Block PopPop mobile application
+("the App", including the Google Play Android app `com.casualgamefactory.blockpoppop` and Toss mini-app `block-pop`). This page informs you of our policies
 regarding the collection, use, and disclosure of information.
 
 ## 1. Information We Collect
@@ -139,6 +143,10 @@ Experiment `first_hint_v1`, version `1`, changes only first-hint copy for instal
 These analytics are sent to the Toss analytics service only when the experiment and analytics features are enabled in the official Toss service. Disabling this analysis does not stop separate processing by advertising platforms.
 
 Events are recorded to prevent duplicate transmission; failed transmissions are not retried. Reinstalling the app or clearing stored data may create a new assignment. Our custom analytics fields do not link individuals or their activity across devices.
+
+### 1.5 Local Notifications (Android 13+ requires notification permission)
+
+The Android app may post reminders scheduled on your device (streak at risk, daily challenge waiting, new theme chips, or a comeback reminder). The message and timing are computed on the device from the locally stored data in section 1.2; nothing is sent to a server. On Android 13 and later the App asks for notification permission once, right after your first completed game, not at launch. Declining only means notifications are not shown; no other feature is affected.
 
 ## 2. Third-Party Services
 
