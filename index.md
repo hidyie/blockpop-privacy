@@ -2,7 +2,7 @@
 
 **시행일: 2026-07-14 · 최종 개정일: 2026-09-29**
 
-GameFactory Studio(이하 "개발자")는 Block PopPop(이하 "앱", Google Play Android 앱 `com.casualgamefactory.blockpoppop` 및 토스 미니앱 `block-pop`) 이용자의
+solmiir(이하 "개발자")는 Block PopPop(이하 "앱", Google Play Android 앱 `com.casualgamefactory.blockpoppop` 및 토스 미니앱 `block-pop`) 이용자의
 개인정보를 중요시하며, 「개인정보 보호법」 등 관련 법령을 준수합니다.
 
 ## 1. 수집하는 정보
@@ -48,9 +48,13 @@ GameFactory Studio(이하 "개발자")는 Block PopPop(이하 "앱", Google Play
 
 각 이벤트는 중복 전송을 방지하도록 기록하며, 전송이 실패한 이벤트는 다시 전송하지 않습니다. 저장 데이터를 삭제하거나 앱을 다시 설치하면 새로운 안내 문구가 배정될 수 있습니다. 개발자의 커스텀 분석 항목으로 개인이나 여러 기기의 이용 이력을 연결하지 않습니다.
 
-### 1.5 로컬 알림 (Android 13 이상은 알림 권한 필요)
+### 1.5 로컬 알림 (Android 13+ 권한 필요, 2026-09-24 추가)
 
-Android 앱은 기기 안에서 예약하는 알림(연속 플레이가 끊길 위험, 오늘의 데일리 챌린지, 새 테마 칩, 복귀 안내 중 하나)을 보낼 수 있습니다. 알림 문구와 발송 시각은 §1.2의 기기 내 저장 정보만으로 기기에서 계산하며, 서버로 전송하는 정보는 없습니다. Android 13 이상에서는 알림 권한을 요청하며, 앱 실행 시가 아니라 첫 게임을 마친 직후 한 번만 요청합니다. 권한을 거부해도 알림이 표시되지 않을 뿐 다른 기능에는 영향이 없습니다.
+앱은 Android 공식 Mobile Notifications 패키지로 기기 내 예약 알림(스트릭 위험·데일리 챌린지 대기 등)을 보냅니다. 서버로 전송되는 데이터는 없습니다 — 알림 문구와 발송 시각은 §1.2에서 이미 기기 내에만 저장된다고 설명한 스트릭 일수·데일리 챌린지 완료 여부에서 전적으로 로컬로 계산합니다. Android 13 이상에서는 알림 권한을 요청하며, 앱 실행 시가 아니라 이용자가 첫 게임을 완료한 직후 1회만 요청합니다. 권한을 거부해도 다른 기능에는 영향이 없습니다.
+
+### 1.6 분석 SDK (기본 비활성 — 활성화 시에만 적용)
+
+현재 배포본은 분석 데이터를 어디에도 전송하지 않는 무동작(no-op) 분석 구조만 포함하고 있으며, Firebase 등 실 분석 SDK는 이 저장소에 포함되어 있지 않습니다. 향후 별도 절차로 활성화되면 최초 실행·최초 소거·게임 종료 점수·광고 노출/보상·데일리 챌린지 완료·보드 전체 클리어 등의 이벤트가 Google로 전송될 수 있으며, 이 경우 본 방침을 갱신해 고지합니다.
 
 ## 2. 제3자 서비스
 
@@ -96,7 +100,7 @@ Google의 광고 데이터 사용 방식: https://policies.google.com/technologi
 
 ## 8. 문의
 
-- 개발자: GameFactory Studio
+- 개발자: solmiir
 - 이메일: grnamu@gmail.com
 
 ---
@@ -105,7 +109,7 @@ Google의 광고 데이터 사용 방식: https://policies.google.com/technologi
 
 **Effective date: 2026-07-14 · Last revised: 2026-09-29**
 
-GameFactory Studio ("we", "the developer") operates the Block PopPop mobile application
+solmiir ("we", "the developer") operates the Block PopPop mobile application
 ("the App", including the Google Play Android app `com.casualgamefactory.blockpoppop` and Toss mini-app `block-pop`). This page informs you of our policies
 regarding the collection, use, and disclosure of information.
 
@@ -144,9 +148,13 @@ These analytics are sent to the Toss analytics service only when the experiment 
 
 Events are recorded to prevent duplicate transmission; failed transmissions are not retried. Reinstalling the app or clearing stored data may create a new assignment. Our custom analytics fields do not link individuals or their activity across devices.
 
-### 1.5 Local Notifications (Android 13+ requires notification permission)
+### 1.5 Local Notifications (Android 13+ permission, added 2026-09-24)
 
-The Android app may post reminders scheduled on your device (streak at risk, daily challenge waiting, new theme chips, or a comeback reminder). The message and timing are computed on the device from the locally stored data in section 1.2; nothing is sent to a server. On Android 13 and later the App asks for notification permission once, right after your first completed game, not at launch. Declining only means notifications are not shown; no other feature is affected.
+The App uses the official Android Mobile Notifications package to post scheduled on-device reminders (e.g. streak-at-risk, daily-challenge-waiting). Nothing is sent to a server: the message and timing are computed entirely on-device from the streak-day and daily-challenge data already described as local-only in §1.2. On Android 13 and later the App requests the notification permission — never at app launch, only once, right after the player's first-ever completed round. Declining has no effect on any other feature.
+
+### 1.6 Analytics SDK (off by default — applies only if enabled)
+
+The current build ships only a no-op analytics structure that sends nothing anywhere; a real analytics SDK (such as Firebase) is not included in this repository. If it is enabled through a separate future procedure, events such as first launch, first line clear, game-over score, ad impressions/rewards, daily-challenge completion, and full-board clears may be sent to Google, and this policy will be updated to disclose that change.
 
 ## 2. Third-Party Services
 
@@ -199,5 +207,5 @@ We may update this policy and will post changes on this page.
 
 ## 9. Contact
 
-- Developer: GameFactory Studio
+- Developer: solmiir
 - Email: grnamu@gmail.com
