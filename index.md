@@ -1,6 +1,6 @@
 # Block PopPop 개인정보처리방침 (한국어)
 
-**시행일: 2026-07-14 · 최종 개정일: 2026-09-29**
+**시행일: 2026-07-14 · 최종 개정일: 2026-10-19**
 
 solmiir(이하 "개발자")는 Block PopPop(이하 "앱", Google Play Android 앱 `com.casualgamefactory.blockpoppop` 및 토스 미니앱 `block-pop`) 이용자의
 개인정보를 중요시하며, 「개인정보 보호법」 등 관련 법령을 준수합니다.
@@ -11,16 +11,19 @@ solmiir(이하 "개발자")는 Block PopPop(이하 "앱", Google Play Android �
 광고 및 분석 플랫폼이 자체적으로 처리하는 정보는 별개이며, 이 앱 전체가 개인정보를 처리하지 않는다는 의미는 아닙니다.
 
 ### 1.1 자동 수집 정보 (Google Play/AdMob)
-- 광고 식별자 (Google Advertising ID / Apple IDFA)
+- 기기·계정 식별자 (Android 광고 ID, 앱 세트 ID 등)
 - 기기 정보 (모델, OS 버전, 언어, 화면 크기)
-- 대략적 위치 정보 (IP 기반 국가/지역 수준)
-- 광고 상호작용 정보 (노출, 클릭)
+- IP 주소 (대략적 위치 추정에 쓰일 수 있음)
+- 앱 상호작용 정보 (앱 실행, 탭, 동영상 조회, 광고 노출·클릭)
+- 진단 정보 (앱·SDK 성능: 실행 시간, 응답 없음 비율, 에너지 사용량)
+
+위 항목은 Google Mobile Ads SDK가 광고 게재, 분석, 사기 방지를 위해 자동으로 수집·Google과 공유합니다. 광고 ID 수집은 이용자가 Android 설정에서 재설정·삭제할 수 있습니다.
 
 ### 1.2 기기 내 저장 정보 (외부 전송 없음)
 
 이용하는 플랫폼과 제공 기능에 따라 다음 정보가 저장됩니다.
-- 게임 진행 상태(무한/어드벤처/데일리 진행도), 점수, 설정(사운드·음악·햅틱), 코인/부스터/스킨 보유 현황,
-  시즌 포인트, 스트릭 일수, 데일리 챌린지·데일리 보상 기록, 첫 안내 완료 여부, 테마(클래식/우드/네온) 해금 상태
+- 게임 진행 상태(무한/데일리 진행도), 점수, 설정(사운드·음악·햅틱), 코인/부스터/스킨 보유 현황,
+  시즌 포인트, 스트릭 일수, 데일리 챌린지·데일리 보상 기록, 첫 안내 완료 여부, 블록 테마 진행 상태
 - 위 데이터는 이용자의 기기에만 저장되며 개발자 서버로 전송되지 않습니다.
 - A/B 배정 값, 등록 여부, 이벤트별 기록 여부, 최초 안내 노출 UTC 날짜도 로컬에 저장합니다. 이 저장 레코드 자체는 전송하지 않으며, 아래 허용 목록의 이벤트만 조건부 전송합니다.
 
@@ -82,10 +85,10 @@ Google의 광고 데이터 사용 방식: https://policies.google.com/technologi
 
 ## 5. 이용자의 권리
 
-- **광고 식별자 재설정/삭제**: Android 설정 → Google → 광고 / iOS 설정 → 개인정보 보호 → 추적
+- **광고 식별자 재설정/삭제**: Android 설정 → Google → 광고
 - **맞춤 광고 거부**: 위 설정에서 맞춤 광고를 제한할 수 있습니다.
 - 게임 데이터 삭제 방법은 위 §4의 플랫폼별 안내를 확인해 주세요. 삭제 관련 문의는 §8로 연락할 수 있습니다.
-- **Google Play/AdMob 배포**: Google 광고가 활성화된 경우 Google의 동의 관리 서비스를 통해 동의 정보를 갱신하고, 필요한 경우 동의 양식을 표시한 뒤 광고 요청 가능 여부를 확인합니다. 현재 앱 설정에는 Google 동의 양식을 다시 여는 별도 기능이 없습니다. 개인정보 관련 문의는 §8을 이용해 주세요.
+- **Google Play/AdMob 배포**: Google 광고가 활성화된 경우 Google의 동의 관리 서비스를 통해 동의 정보를 갱신하고, 필요한 경우 동의 양식을 표시한 뒤 광고 요청 가능 여부를 확인합니다. 동의가 필요한 지역(EEA·영국·스위스)에서는 앱 설정 → Privacy options(개인정보 옵션) 버튼으로 Google 동의 양식을 언제든 다시 열어 동의를 변경하거나 철회할 수 있습니다. 그 외 지역에서는 이 버튼이 표시되지 않습니다. 개인정보 관련 문의는 §8을 이용해 주세요.
 - **토스 배포**: Google 광고 동의 관리와 별개이며, 플랫폼 개인정보 설정은 [토스 개인정보처리방침](https://privacy.toss.im/privacy-policy), 해당 제공자의 정책 및 토스 앱 내 도움말을 확인해 주세요.
 
 ## 6. 아동의 개인정보
@@ -107,7 +110,7 @@ Google의 광고 데이터 사용 방식: https://policies.google.com/technologi
 
 # Block PopPop Privacy Policy (English)
 
-**Effective date: 2026-07-14 · Last revised: 2026-09-29**
+**Effective date: 2026-07-14 · Last revised: 2026-10-19**
 
 solmiir ("we", "the developer") operates the Block PopPop mobile application
 ("the App", including the Google Play Android app `com.casualgamefactory.blockpoppop` and Toss mini-app `block-pop`). This page informs you of our policies
@@ -120,17 +123,20 @@ user IDs, advertising IDs, or device IDs. This does not mean that the App or its
 and analytics platforms process no personal information.
 
 ### 1.1 Automatically Collected (Google Play/AdMob)
-- Advertising identifiers (Google Advertising ID / Apple IDFA)
+- Device and account identifiers (Android advertising ID, app set ID, and similar)
 - Device information (model, OS version, language, screen size)
-- Coarse location (country/region level, derived from IP)
-- Ad interaction data (impressions, clicks)
+- IP address (may be used to estimate approximate location)
+- App interactions (app launch, taps, video views, ad impressions and clicks)
+- Diagnostics (app and SDK performance such as launch time, hang rate, energy use)
+
+The Google Mobile Ads SDK collects these automatically and shares them with Google for advertising, analytics and fraud prevention. You can reset or delete the advertising ID in Android settings.
 
 ### 1.2 Stored Locally on Your Device (never transmitted to us)
 
 The following information is stored according to the platform and features you use.
-- Game progress (Endless/Adventure/Daily), scores, settings (sound/music/haptic),
+- Game progress (Endless/Daily), scores, settings (sound/music/haptic),
   coins/boosters/skin ownership, season points, streak days, daily-challenge and
-  daily-reward records, first-hint completion status, theme (Classic/Wood/Neon) unlock status
+  daily-reward records, first-hint completion status, block-theme progress
 - This data stays on your device and is never sent to our servers.
 - A/B assignment, enrolment, event flags and the exposure UTC date are stored locally. The stored record itself is not transmitted; the conditional events below use a separate fixed payload.
 
@@ -182,7 +188,7 @@ How Google uses data: https://policies.google.com/technologies/partner-sites
 
 ## 5. Your Rights
 
-- **Reset/delete advertising ID**: Android Settings → Google → Ads / iOS Settings → Privacy → Tracking
+- **Reset/delete advertising ID**: Android Settings → Google → Ads
 - **Opt out of personalized ads** via the settings above.
 - For game-data deletion, see the platform-specific information in section 4. Contact us through section 9 with deletion enquiries.
 
@@ -195,7 +201,7 @@ child-directed treatment (TFCD/TFUA) in compliance with Google Play Families Pol
 ## 7. GDPR / CCPA Notice
 
 - **Google Play/AdMob distribution**: when Google advertising is enabled, Google’s consent management service updates consent information and shows a form when required before requesting ads. This is not the consent flow for Toss.
-- The current App settings do not provide a separate action to reopen the Google consent form. For privacy enquiries, use section 9.
+- In regions where consent is required (EEA, UK, Switzerland), Settings → Privacy options reopens the Google consent form at any time so you can change or withdraw your consent. Elsewhere this button is hidden. For privacy enquiries, use section 9.
 - **Toss distribution**: consult the [Toss privacy policy](https://privacy.toss.im/privacy-policy), the applicable provider policy, and help available in the Toss app for platform privacy settings.
 - **California residents**: we do not "sell" personal information as defined by the CCPA;
   ad partners may process identifiers as described above. You may opt out of personalized ads
