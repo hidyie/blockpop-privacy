@@ -1,6 +1,6 @@
 # Block PopPop 개인정보처리방침 (한국어)
 
-**시행일: 2026-07-14 · 최종 개정일: 2026-10-19**
+**시행일: 2026-07-14 · 최종 개정일: 2026-10-24**
 
 solmiir(이하 "개발자")는 Block PopPop(이하 "앱", Google Play Android 앱 `com.casualgamefactory.blockpoppop` 및 토스 미니앱 `block-pop`) 이용자의
 개인정보를 중요시하며, 「개인정보 보호법」 등 관련 법령을 준수합니다.
@@ -59,6 +59,10 @@ solmiir(이하 "개발자")는 Block PopPop(이하 "앱", Google Play Android �
 
 현재 배포본은 분석 데이터를 어디에도 전송하지 않는 무동작(no-op) 분석 구조만 포함하고 있으며, Firebase 등 실 분석 SDK는 이 저장소에 포함되어 있지 않습니다. 향후 별도 절차로 활성화되면 최초 실행·최초 소거·게임 종료 점수·광고 노출/보상·데일리 챌린지 완료·보드 전체 클리어 등의 이벤트가 Google로 전송될 수 있으며, 이 경우 본 방침을 갱신해 고지합니다.
 
+### 1.7 인앱 구매 (Google Play 결제)
+
+앱은 선택형 인앱 구매(광고 제거, 코인 묶음 등)를 Google Play 결제(Google Play Billing)로 제공합니다. 결제는 전적으로 Google Play가 처리하며, 개발자는 카드번호 등 결제 수단 정보를 받지 않고 저장하지도 않습니다. 앱은 구매 상태와 주문 기록(주문·거래 ID, 상품 ID, 처리 상태, 시각)을 **기기 안에만** 저장하며, 이 기록은 구매한 항목을 지급하고, 같은 구매의 중복 지급을 막고, 구매 복원을 처리하는 데에만 사용합니다. 앱은 Google Play가 서명한 구매 정보를 기기에서 서명 검증합니다. 환불과 구매 관리는 Google Play(Play 스토어 앱의 결제 및 정기 결제 메뉴)를 통해 이루어집니다. 기기 내 구매 기록은 앱을 삭제하거나 앱 데이터를 지울 때까지 기기에 남습니다.
+
 ## 2. 제3자 서비스
 
 앱은 배포 플랫폼과 활성화 설정에 따라 다음 서비스를 사용합니다:
@@ -66,6 +70,7 @@ solmiir(이하 "개발자")는 Block PopPop(이하 "앱", Google Play Android �
 | 서비스 | 제공자 | 개인정보처리방침 |
 |---|---|---|
 | AdMob | Google LLC | https://policies.google.com/privacy |
+| Google Play 결제 (Google Play Billing) | Google LLC | https://policies.google.com/privacy |
 | 토스 인앱 광고·분석 | Apps in Toss / 토스 | [토스 개인정보처리방침](https://privacy.toss.im/privacy-policy) 및 해당 광고 제공자의 정책 확인 |
 
 Google의 광고 데이터 사용 방식: https://policies.google.com/technologies/partner-sites
@@ -73,12 +78,14 @@ Google의 광고 데이터 사용 방식: https://policies.google.com/technologi
 ## 3. 정보 이용 목적
 
 - 배너/전면/보상형 광고 게재 및 광고 성과 측정
+- 인앱 구매 처리·구매 항목 지급·구매 복원(§1.7)
 - 앱 안정성 개선 (충돌 정보)
 - 토스 첫 안내의 이용 편의성 비교: 첫 배치·소거·메뉴 이용·게임 종료·다음 날 복귀 비율 분석(§1.4 활성화 조건 적용)
 
 ## 4. 보유 및 파기
 
 - Android 설치 앱의 로컬 데이터는 앱 데이터 삭제 또는 앱 제거로 삭제할 수 있습니다.
+- 구매 상태와 주문 기록은 기기에만 저장되며 앱을 삭제하거나 앱 데이터를 지울 때까지 남습니다. Google Play 쪽 결제·환불 기록은 Google의 정책에 따릅니다(§1.7).
 - 토스 미니앱은 토스 내 저장 공간을 사용합니다. 데이터 삭제 방법과 범위는 토스 앱의 도움말 또는 아래 문의처를 통해 확인해 주세요. 미니앱을 닫는 것과 데이터를 삭제하는 것은 다릅니다.
 - 광고 SDK 수집 데이터: 각 제공자의 정책에 따릅니다.
 - 토스 광고·분석 데이터의 보유 및 삭제는 플랫폼 정책에 따릅니다. 로컬 기록 삭제가 이미 플랫폼에 전달된 이벤트 삭제를 보장하지는 않습니다. 문의는 §8 연락처로 가능합니다.
@@ -88,6 +95,7 @@ Google의 광고 데이터 사용 방식: https://policies.google.com/technologi
 - **광고 식별자 재설정/삭제**: Android 설정 → Google → 광고
 - **맞춤 광고 거부**: 위 설정에서 맞춤 광고를 제한할 수 있습니다.
 - 게임 데이터 삭제 방법은 위 §4의 플랫폼별 안내를 확인해 주세요. 삭제 관련 문의는 §8로 연락할 수 있습니다.
+- **구매 관리·환불**: Google Play(Play 스토어 앱의 결제 및 정기 결제 메뉴)에서 구매 내역 확인과 환불 요청을 할 수 있습니다. 앱 데이터를 지우면 기기 내 구매 기록도 삭제됩니다(§1.7).
 - **Google Play/AdMob 배포**: Google 광고가 활성화된 경우 Google의 동의 관리 서비스를 통해 동의 정보를 갱신하고, 필요한 경우 동의 양식을 표시한 뒤 광고 요청 가능 여부를 확인합니다. 동의가 필요한 지역(EEA·영국·스위스)에서는 앱 설정 → Privacy options(개인정보 옵션) 버튼으로 Google 동의 양식을 언제든 다시 열어 동의를 변경하거나 철회할 수 있습니다. 그 외 지역에서는 이 버튼이 표시되지 않습니다. 개인정보 관련 문의는 §8을 이용해 주세요.
 - **토스 배포**: Google 광고 동의 관리와 별개이며, 플랫폼 개인정보 설정은 [토스 개인정보처리방침](https://privacy.toss.im/privacy-policy), 해당 제공자의 정책 및 토스 앱 내 도움말을 확인해 주세요.
 
@@ -96,6 +104,8 @@ Google의 광고 데이터 사용 방식: https://policies.google.com/technologi
 앱은 만 14세 미만 아동을 주 대상으로 하지 않습니다.
 아동 대상으로 서비스할 경우 개발자는 Google Play 가족 정책 및 COPPA를 준수하도록
 광고 요청을 아동 대상 처리(TFCD/TFUA)로 설정합니다.
+
+미성년자의 인앱 구매에는 법정대리인(보호자)의 동의가 필요합니다.
 
 ## 7. 개인정보처리방침의 변경
 
@@ -110,7 +120,7 @@ Google의 광고 데이터 사용 방식: https://policies.google.com/technologi
 
 # Block PopPop Privacy Policy (English)
 
-**Effective date: 2026-07-14 · Last revised: 2026-10-19**
+**Effective date: 2026-07-14 · Last revised: 2026-10-24**
 
 solmiir ("we", "the developer") operates the Block PopPop mobile application
 ("the App", including the Google Play Android app `com.casualgamefactory.blockpoppop` and Toss mini-app `block-pop`). This page informs you of our policies
@@ -162,6 +172,10 @@ The App uses the official Android Mobile Notifications package to post scheduled
 
 The current build ships only a no-op analytics structure that sends nothing anywhere; a real analytics SDK (such as Firebase) is not included in this repository. If it is enabled through a separate future procedure, events such as first launch, first line clear, game-over score, ad impressions/rewards, daily-challenge completion, and full-board clears may be sent to Google, and this policy will be updated to disclose that change.
 
+### 1.7 In-App Purchases (Google Play Billing)
+
+The App offers optional in-app purchases (for example removing ads or coin packs) through Google Play Billing. Google Play processes every payment; the developer does not receive or store card numbers or other payment details. The App stores purchase state and an order record (order/transaction ID, product ID, status, timestamps) **only on your device**, and uses it solely to deliver purchased items, prevent the same purchase from being delivered twice, and restore purchases. The App verifies the Google Play purchase signature on the device. Refunds and purchase management are handled through Google Play (the Payments & subscriptions menu of the Play Store app). Purchase records on your device remain until you uninstall the App or clear its data.
+
 ## 2. Third-Party Services
 
 The App uses the following services depending on distribution platform and enabled settings:
@@ -169,6 +183,7 @@ The App uses the following services depending on distribution platform and enabl
 | Service | Provider | Privacy Policy |
 |---|---|---|
 | AdMob | Google LLC | https://policies.google.com/privacy |
+| Google Play Billing | Google LLC | https://policies.google.com/privacy |
 | Toss in-app advertising and analytics | Apps in Toss / Toss | See the [Toss privacy policy](https://privacy.toss.im/privacy-policy) and the applicable advertising provider policy |
 
 How Google uses data: https://policies.google.com/technologies/partner-sites
@@ -176,12 +191,14 @@ How Google uses data: https://policies.google.com/technologies/partner-sites
 ## 3. Purpose of Use
 
 - Serving banner, interstitial, and rewarded advertisements; measuring ad performance
+- Processing in-app purchases, delivering purchased items and restoring purchases (section 1.7)
 - Improving app stability (crash information)
 - Comparing first-hint usability through placement, clear, game-end, tool-open and next-day-return rates under section 1.4.
 
 ## 4. Data Retention & Deletion
 
 - Local data in the Android app can be deleted by clearing its app data or uninstalling it.
+- Purchase state and order records are stored only on your device and remain until you uninstall the App or clear its data. Payment and refund records held by Google Play follow Google's policies (section 1.7).
 - The Toss mini-app uses storage within Toss. Consult help in the Toss app or contact us below for deletion methods and scope. Closing the mini-app does not mean its stored data has been deleted.
 - Data collected by ad SDKs is retained according to each provider's policy.
 - Toss advertising/analytics retention and deletion follow platform policies. Deleting local records does not ensure deletion of events already delivered to the platform; contact us through section 9 for enquiries.
@@ -191,12 +208,15 @@ How Google uses data: https://policies.google.com/technologies/partner-sites
 - **Reset/delete advertising ID**: Android Settings → Google → Ads
 - **Opt out of personalized ads** via the settings above.
 - For game-data deletion, see the platform-specific information in section 4. Contact us through section 9 with deletion enquiries.
+- **Manage purchases and refunds**: view purchase history and request refunds through Google Play (Payments & subscriptions in the Play Store app). Clearing app data also deletes the purchase records stored on your device (section 1.7).
 
 ## 6. Children's Privacy
 
 The App is not primarily directed at children under 14.
 If distributed in a children's category, we configure ad requests with
 child-directed treatment (TFCD/TFUA) in compliance with Google Play Families Policy and COPPA.
+
+In-app purchases by minors require the consent of a parent or legal guardian.
 
 ## 7. GDPR / CCPA Notice
 
