@@ -114,7 +114,7 @@ Google의 광고 데이터 사용 방식: https://policies.google.com/technologi
 ## 8. 문의
 
 - 개발자: solmiir
-- 이메일: grnamu@gmail.com
+- 이메일: contact@solmiir.com
 
 ---
 
@@ -234,4 +234,4 @@ We may update this policy and will post changes on this page.
 ## 9. Contact
 
 - Developer: solmiir
-- Email: grnamu@gmail.com
+- Email: contact@solmiir.com
