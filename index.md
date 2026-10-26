@@ -1,6 +1,6 @@
 # Block PopPop 개인정보처리방침 (한국어)
 
-**시행일: 2026-07-14 · 최종 개정일: 2026-10-24**
+**시행일: 2026-07-14 · 최종 개정일: 2026-10-26**
 
 solmiir(이하 "개발자")는 Block PopPop(이하 "앱", Google Play Android 앱 `com.casualgamefactory.blockpoppop` 및 토스 미니앱 `block-pop`) 이용자의
 개인정보를 중요시하며, 「개인정보 보호법」 등 관련 법령을 준수합니다.
@@ -63,6 +63,10 @@ solmiir(이하 "개발자")는 Block PopPop(이하 "앱", Google Play Android �
 
 앱은 선택형 인앱 구매(광고 제거, 코인 묶음 등)를 Google Play 결제(Google Play Billing)로 제공합니다. 결제는 전적으로 Google Play가 처리하며, 개발자는 카드번호 등 결제 수단 정보를 받지 않고 저장하지도 않습니다. 앱은 구매 상태와 주문 기록(주문·거래 ID, 상품 ID, 처리 상태, 시각)을 **기기 안에만** 저장하며, 이 기록은 구매한 항목을 지급하고, 같은 구매의 중복 지급을 막고, 구매 복원을 처리하는 데에만 사용합니다. 앱은 Google Play가 서명한 구매 정보를 기기에서 서명 검증합니다. 환불과 구매 관리는 Google Play(Play 스토어 앱의 결제 및 정기 결제 메뉴)를 통해 이루어집니다. 기기 내 구매 기록은 앱을 삭제하거나 앱 데이터를 지울 때까지 기기에 남습니다.
 
+### 1.8 Google Play 게임즈 서비스 (랭킹, Google Play 버전)
+
+Google Play 버전의 앱은 랭킹(리더보드) 기능을 위해 Google Play 게임즈 서비스를 사용합니다. 이용자가 Play 게임즈에 로그인하면 Google이 **플레이어 ID와 닉네임(프로필 이름)**을 앱에 제공하고, 앱은 이용자의 **점수(클래식 최고 점수, 달성한 최고 레벨)**를 Google Play 게임즈 서버로 보내 순위를 계산하고 보여 줍니다. 리더보드에서는 닉네임과 점수가 다른 플레이어에게 보일 수 있습니다. 이 정보의 수집·저장·공개는 Google의 정책(https://policies.google.com/privacy)에 따르며, 개발자는 이 기능을 위해 점수 외의 개인정보를 따로 받거나 저장하지 않습니다. 로그인은 선택 사항이며, 로그인하지 않아도 게임의 모든 내용을 이용할 수 있습니다. Play 게임즈 프로필과 점수는 이용자의 Google 계정과 Google Play 게임즈 설정에서 관리·삭제를 요청할 수 있습니다. 토스 버전에는 이 기능이 포함되어 있지 않습니다.
+
 ## 2. 제3자 서비스
 
 앱은 배포 플랫폼과 활성화 설정에 따라 다음 서비스를 사용합니다:
@@ -71,6 +75,7 @@ solmiir(이하 "개발자")는 Block PopPop(이하 "앱", Google Play Android �
 |---|---|---|
 | AdMob | Google LLC | https://policies.google.com/privacy |
 | Google Play 결제 (Google Play Billing) | Google LLC | https://policies.google.com/privacy |
+| Google Play 게임즈 서비스 (랭킹) | Google LLC | https://policies.google.com/privacy |
 | 토스 인앱 광고·분석 | Apps in Toss / 토스 | [토스 개인정보처리방침](https://privacy.toss.im/privacy-policy) 및 해당 광고 제공자의 정책 확인 |
 
 Google의 광고 데이터 사용 방식: https://policies.google.com/technologies/partner-sites
@@ -120,7 +125,7 @@ Google의 광고 데이터 사용 방식: https://policies.google.com/technologi
 
 # Block PopPop Privacy Policy (English)
 
-**Effective date: 2026-07-14 · Last revised: 2026-10-24**
+**Effective date: 2026-07-14 · Last revised: 2026-10-26**
 
 solmiir ("we", "the developer") operates the Block PopPop mobile application
 ("the App", including the Google Play Android app `com.casualgamefactory.blockpoppop` and Toss mini-app `block-pop`). This page informs you of our policies
@@ -176,6 +181,10 @@ The current build ships only a no-op analytics structure that sends nothing anyw
 
 The App offers optional in-app purchases (for example removing ads or coin packs) through Google Play Billing. Google Play processes every payment; the developer does not receive or store card numbers or other payment details. The App stores purchase state and an order record (order/transaction ID, product ID, status, timestamps) **only on your device**, and uses it solely to deliver purchased items, prevent the same purchase from being delivered twice, and restore purchases. The App verifies the Google Play purchase signature on the device. Refunds and purchase management are handled through Google Play (the Payments & subscriptions menu of the Play Store app). Purchase records on your device remain until you uninstall the App or clear its data.
 
+### 1.8 Google Play Games Services (Rankings, Google Play version)
+
+The Google Play version of the App uses Google Play Games Services for its rankings (leaderboards). When you sign in to Play Games, Google provides your **player ID and nickname (profile name)** to the App, and the App sends your **scores (best Classic score and highest level reached)** to Google Play Games servers so your rank can be calculated and shown. On a leaderboard, your nickname and score can be visible to other players. Google's policies (https://policies.google.com/privacy) govern how this information is collected, stored and displayed; the developer does not receive or store personal information other than the score for this feature. Signing in is optional, and the whole game works without it. You can manage your Play Games profile and scores, and request their deletion, through your Google Account and Google Play Games settings. The Toss version does not include this feature.
+
 ## 2. Third-Party Services
 
 The App uses the following services depending on distribution platform and enabled settings:
@@ -184,6 +193,7 @@ The App uses the following services depending on distribution platform and enabl
 |---|---|---|
 | AdMob | Google LLC | https://policies.google.com/privacy |
 | Google Play Billing | Google LLC | https://policies.google.com/privacy |
+| Google Play Games Services (rankings) | Google LLC | https://policies.google.com/privacy |
 | Toss in-app advertising and analytics | Apps in Toss / Toss | See the [Toss privacy policy](https://privacy.toss.im/privacy-policy) and the applicable advertising provider policy |
 
 How Google uses data: https://policies.google.com/technologies/partner-sites
