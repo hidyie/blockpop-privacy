@@ -1,6 +1,6 @@
 # Block PopPop 개인정보처리방침 (한국어)
 
-**시행일: 2026-07-14 · 최종 개정일: 2026-10-26**
+**시행일: 2026-07-14 · 최종 개정일: 2026-10-31**
 
 solmiir(이하 "개발자")는 Block PopPop(이하 "앱", Google Play Android 앱 `com.casualgamefactory.blockpoppop` 및 토스 미니앱 `block-pop`) 이용자의
 개인정보를 중요시하며, 「개인정보 보호법」 등 관련 법령을 준수합니다.
@@ -55,9 +55,15 @@ solmiir(이하 "개발자")는 Block PopPop(이하 "앱", Google Play Android �
 
 앱은 Android 공식 Mobile Notifications 패키지로 기기 내 예약 알림(스트릭 위험·데일리 챌린지 대기 등)을 보냅니다. 서버로 전송되는 데이터는 없습니다 — 알림 문구와 발송 시각은 §1.2에서 이미 기기 내에만 저장된다고 설명한 스트릭 일수·데일리 챌린지 완료 여부에서 전적으로 로컬로 계산합니다. Android 13 이상에서는 알림 권한을 요청하며, 앱 실행 시가 아니라 이용자가 첫 게임을 완료한 직후 1회만 요청합니다. 권한을 거부해도 다른 기능에는 영향이 없습니다.
 
-### 1.6 분석 SDK (기본 비활성 — 활성화 시에만 적용)
+### 1.6 Firebase 애널리틱스 (Google Play 버전, 1.0.18부터)
 
-현재 배포본은 분석 데이터를 어디에도 전송하지 않는 무동작(no-op) 분석 구조만 포함하고 있으며, Firebase 등 실 분석 SDK는 이 저장소에 포함되어 있지 않습니다. 향후 별도 절차로 활성화되면 최초 실행·최초 소거·게임 종료 점수·광고 노출/보상·데일리 챌린지 완료·보드 전체 클리어 등의 이벤트가 Google로 전송될 수 있으며, 이 경우 본 방침을 갱신해 고지합니다.
+Google Play 버전의 앱은 1.0.18부터 Google의 Firebase 애널리틱스로 앱 이용 통계를 수집합니다. 다음 날·7일 뒤 다시 실행하는 비율, 게임 난이도, 광고 노출 빈도가 적절한지 확인하는 데 사용합니다.
+
+- 앱이 보내는 이벤트: 첫 줄 소거와 그때까지 걸린 시간, 게임 종료 시 점수와 소거한 줄 수, 광고 노출·보상 지급과 광고 위치, 데일리 챌린지 완료 시 점수와 목표, 보드 전체 클리어
+- Firebase SDK가 자동으로 처리하는 정보: 최초 실행, 앱 인스턴스 ID, 광고 ID(Android 설정에서 재설정·삭제 가능), 기기 모델·OS 버전·언어, 앱 버전, 세션 시작과 이용 시간, IP 주소로 추정한 대략적 위치(국가·도시 수준)
+- 개발자는 이벤트에 이름, 이메일, 연락처, Play 게임즈 플레이어 ID 같은 직접 식별 정보를 넣지 않습니다.
+- 데이터는 Google이 Firebase 약관과 Google 개인정보처리방침에 따라 처리하며, 개발자는 집계된 통계를 봅니다.
+- 토스 미니앱 버전에는 Firebase가 포함되지 않습니다.
 
 ### 1.7 인앱 구매 (Google Play 결제)
 
@@ -74,6 +80,7 @@ Google Play 버전의 앱은 랭킹(리더보드) 기능을 위해 Google Play �
 | 서비스 | 제공자 | 개인정보처리방침 |
 |---|---|---|
 | AdMob | Google LLC | https://policies.google.com/privacy |
+| Firebase 애널리틱스 (Google Play 버전) | Google LLC | https://policies.google.com/privacy |
 | Google Play 결제 (Google Play Billing) | Google LLC | https://policies.google.com/privacy |
 | Google Play 게임즈 서비스 (랭킹) | Google LLC | https://policies.google.com/privacy |
 | 토스 인앱 광고·분석 | Apps in Toss / 토스 | [토스 개인정보처리방침](https://privacy.toss.im/privacy-policy) 및 해당 광고 제공자의 정책 확인 |
@@ -85,6 +92,7 @@ Google의 광고 데이터 사용 방식: https://policies.google.com/technologi
 - 배너/전면/보상형 광고 게재 및 광고 성과 측정
 - 인앱 구매 처리·구매 항목 지급·구매 복원(§1.7)
 - 앱 안정성 개선 (충돌 정보)
+- 앱 이용 통계 분석: 재방문율, 게임 종료 점수 분포, 광고 노출 빈도 점검(§1.6)
 - 토스 첫 안내의 이용 편의성 비교: 첫 배치·소거·메뉴 이용·게임 종료·다음 날 복귀 비율 분석(§1.4 활성화 조건 적용)
 
 ## 4. 보유 및 파기
@@ -93,6 +101,7 @@ Google의 광고 데이터 사용 방식: https://policies.google.com/technologi
 - 구매 상태와 주문 기록은 기기에만 저장되며 앱을 삭제하거나 앱 데이터를 지울 때까지 남습니다. Google Play 쪽 결제·환불 기록은 Google의 정책에 따릅니다(§1.7).
 - 토스 미니앱은 토스 내 저장 공간을 사용합니다. 데이터 삭제 방법과 범위는 토스 앱의 도움말 또는 아래 문의처를 통해 확인해 주세요. 미니앱을 닫는 것과 데이터를 삭제하는 것은 다릅니다.
 - 광고 SDK 수집 데이터: 각 제공자의 정책에 따릅니다.
+- Firebase 애널리틱스 데이터: Google 애널리틱스 데이터 보존 설정에 따라 보관 후 삭제됩니다.
 - 토스 광고·분석 데이터의 보유 및 삭제는 플랫폼 정책에 따릅니다. 로컬 기록 삭제가 이미 플랫폼에 전달된 이벤트 삭제를 보장하지는 않습니다. 문의는 §8 연락처로 가능합니다.
 
 ## 5. 이용자의 권리
@@ -125,7 +134,7 @@ Google의 광고 데이터 사용 방식: https://policies.google.com/technologi
 
 # Block PopPop Privacy Policy (English)
 
-**Effective date: 2026-07-14 · Last revised: 2026-10-26**
+**Effective date: 2026-07-14 · Last revised: 2026-10-31**
 
 solmiir ("we", "the developer") operates the Block PopPop mobile application
 ("the App", including the Google Play Android app `com.casualgamefactory.blockpoppop` and Toss mini-app `block-pop`). This page informs you of our policies
@@ -173,9 +182,15 @@ Events are recorded to prevent duplicate transmission; failed transmissions are 
 
 The App uses the official Android Mobile Notifications package to post scheduled on-device reminders (e.g. streak-at-risk, daily-challenge-waiting). Nothing is sent to a server: the message and timing are computed entirely on-device from the streak-day and daily-challenge data already described as local-only in §1.2. On Android 13 and later the App requests the notification permission — never at app launch, only once, right after the player's first-ever completed round. Declining has no effect on any other feature.
 
-### 1.6 Analytics SDK (off by default — applies only if enabled)
+### 1.6 Firebase Analytics (Google Play version, from 1.0.18)
 
-The current build ships only a no-op analytics structure that sends nothing anywhere; a real analytics SDK (such as Firebase) is not included in this repository. If it is enabled through a separate future procedure, events such as first launch, first line clear, game-over score, ad impressions/rewards, daily-challenge completion, and full-board clears may be sent to Google, and this policy will be updated to disclose that change.
+From version 1.0.18, the Google Play version of the App uses Google's Firebase Analytics to collect usage statistics. We use them to see how many players come back the next day or a week later, and to check that difficulty and ad frequency feel right.
+
+- Events the App sends: first line clear and the time it took, game-over score and lines cleared, ad impressions and rewards with the ad placement, daily-challenge completion with score and target, and full-board clears
+- Information the Firebase SDK handles automatically: first launch, app instance ID, advertising ID (you can reset or delete it in Android settings), device model, OS version and language, app version, session start and engagement time, and approximate location (country or city level) estimated from the IP address
+- We do not add direct identifiers such as names, email addresses, contact details or Play Games player IDs to these events.
+- Google processes this data under the Firebase terms and the Google Privacy Policy; we see aggregated statistics.
+- The Toss mini-app version does not include Firebase.
 
 ### 1.7 In-App Purchases (Google Play Billing)
 
@@ -192,6 +207,7 @@ The App uses the following services depending on distribution platform and enabl
 | Service | Provider | Privacy Policy |
 |---|---|---|
 | AdMob | Google LLC | https://policies.google.com/privacy |
+| Firebase Analytics (Google Play version) | Google LLC | https://policies.google.com/privacy |
 | Google Play Billing | Google LLC | https://policies.google.com/privacy |
 | Google Play Games Services (rankings) | Google LLC | https://policies.google.com/privacy |
 | Toss in-app advertising and analytics | Apps in Toss / Toss | See the [Toss privacy policy](https://privacy.toss.im/privacy-policy) and the applicable advertising provider policy |
@@ -203,6 +219,7 @@ How Google uses data: https://policies.google.com/technologies/partner-sites
 - Serving banner, interstitial, and rewarded advertisements; measuring ad performance
 - Processing in-app purchases, delivering purchased items and restoring purchases (section 1.7)
 - Improving app stability (crash information)
+- Analysing app usage: return rates, game-over score distribution and ad frequency (section 1.6)
 - Comparing first-hint usability through placement, clear, game-end, tool-open and next-day-return rates under section 1.4.
 
 ## 4. Data Retention & Deletion
@@ -211,6 +228,7 @@ How Google uses data: https://policies.google.com/technologies/partner-sites
 - Purchase state and order records are stored only on your device and remain until you uninstall the App or clear its data. Payment and refund records held by Google Play follow Google's policies (section 1.7).
 - The Toss mini-app uses storage within Toss. Consult help in the Toss app or contact us below for deletion methods and scope. Closing the mini-app does not mean its stored data has been deleted.
 - Data collected by ad SDKs is retained according to each provider's policy.
+- Firebase Analytics data: kept and then deleted according to the Google Analytics data-retention setting.
 - Toss advertising/analytics retention and deletion follow platform policies. Deleting local records does not ensure deletion of events already delivered to the platform; contact us through section 9 for enquiries.
 
 ## 5. Your Rights
